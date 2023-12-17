@@ -6,7 +6,9 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    private val renderer = MyRenderer(applicationContext)
+    private val renderer by lazy {
+        MyRenderer(applicationContext)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
